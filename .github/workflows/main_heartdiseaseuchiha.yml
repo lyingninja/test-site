@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'Heartdiseaseuchiha'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EF33852671AF45F39F6929A48927A0E3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5CA7B25B302B4D598244743EFF6FA74A }}
