@@ -4,10 +4,10 @@ from flask import Flask, render_template, redirect, url_for,request
 #from wtforms import StringField, SubmitField
 #from wtforms.validators import DataRequired 
 #import pandas as pd
-#import numpy as np 
-#from   sklearn.model_selection   import   train_test_split 
-#import joblib
-#from   sklearn.linear_model   import   LogisticRegression 
+import numpy as np 
+from   sklearn.model_selection   import   train_test_split 
+import joblib
+from   sklearn.linear_model   import   LogisticRegression 
 #from   sklearn.metrics   import   accuracy_score
 
 app = Flask(__name__)
@@ -18,8 +18,8 @@ def hello_world():
 @app.route('/predict/',methods = ["POST"])                    
 def predict(): 
      if request.method == "POST" :
-        input_data = [x  for x in request.form.items() ]
-       # result = ml(input_data)
+        input_data = [float(x[1])  for x in request.form.items() ]
+        result = ml(input_data)
         
         return render_template("index.html", res=input_data)
      else :
