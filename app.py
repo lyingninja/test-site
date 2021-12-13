@@ -21,7 +21,7 @@ def predict():
         input_data = [float(x[1])  for x in request.form.items() ]
         result = ml(input_data)
         
-        return render_template("index.html", res=input_data)
+        return render_template("index.html", res=result)
      else :
          return "404 error"
          
